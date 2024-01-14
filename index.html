@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Aster's 文档站</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Aster\'s 文档站',
+      repo: '',   //Github链接，填写后右上角显示logo
+      loadNavbar: true, //开启导航栏
+      coverpage: true,  //开启封面
+      loadSidebar: true,//开启侧边栏
+      autoHeader: true,//自动增加标题
+      auto2top: true,   //切换页面自动回到顶部
+      subMaxLevel: 999, //自动增加文章标题
+      
+      //添加搜索功能
+      search: {
+        paths: 'auto',
+        placeholder: {
+          '/':'搜索'
+        },
+        //如果中文和英文文档都没有内容，则返回
+        noData: {
+          '/':'无结果'
+        },
+        depth: 4,         //搜索标题的最大层级
+        maxAge: 86400000,//过期时间，单位毫秒，默认一天
+        hideOtherSidebarContent: true // 是否隐藏其他侧边栏内容
+      },
+      //复制代码
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'OK',
+      },
+      //页脚
+      footer: {
+        copy: 'Copyright &copy; 2024</span>',
+        auth: ' <strong>-Aster-</strong>',
+        pre: '<hr/>',
+        style: 'text-align: center',
+      },
+      //阅读进度条
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
+      //返回顶部
+      docsifyBackTop: {
+        size: 32,           	// 数值，组件大小，默认值32。
+        bottom: 15,         	// 数值，组件底部偏移距离，默认值15。
+        right: 15,          	// 数值，组件右侧偏移距离，默认值15。
+        logo: '🔝',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
+        bgColor: '\#2096ff'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
+      },
+      //引用样式增强
+      'flexible-alerts': {
+        style: 'callout'
+      }
+      
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 复制代码到剪切板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 搜索功能 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 文档页脚增强 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer.min.js"></script>
+  <!-- 阅读进度条 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  <!-- 返回顶部 -->
+  <script src="//cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!--
+    忽略某张图片     
+    ![](image.png ":no-zoom")
+  -->
+  <!-- 引用样式增强 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
+  <!--
+    [!NOTE]
+    [!TIP]
+    [!WARNING]
+    [!ATTENTION]
+  -->
+  <!-- C++、Java、python、bash等等语法高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-matlab.js"></script>
+  
+  
+</body>
+</html>
