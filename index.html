@@ -25,7 +25,7 @@
       search: {
         paths: 'auto',
         placeholder: {
-          '/':'搜索'
+          '/':'搜索 [Ctrl+K]'
         },
         //如果中文和英文文档都没有内容，则返回
         noData: {
@@ -56,11 +56,11 @@
       },
       //返回顶部
       docsifyBackTop: {
-        size: 32,           	// 数值，组件大小，默认值32。
-        bottom: 15,         	// 数值，组件底部偏移距离，默认值15。
-        right: 15,          	// 数值，组件右侧偏移距离，默认值15。
-        logo: '🔝',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
-        bgColor: '\#2096ff'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
+        size: 32,             // 数值，组件大小，默认值32。
+        bottom: 15,           // 数值，组件底部偏移距离，默认值15。
+        right: 15,            // 数值，组件右侧偏移距离，默认值15。
+        logo: '🔝',        // logo:字符串或svg矢量图代码，默认为svg代码图标。
+        bgColor: '\#2096ff'     // 背景颜色，#fff、pink等，logo为svg图标时，不填。
       },
       //引用样式增强
       'flexible-alerts': {
@@ -75,6 +75,23 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 搜索功能 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script>
+      document.addEventListener('keydown', function(event) {
+          // 检查是否按下了Ctrl+K组合键
+          if (event.ctrlKey && event.key === 'k') {
+               //阻止浏览器的快捷键
+               event.preventDefault();
+               //打开搜索框
+               openSearchBox();
+          }
+      });
+      function openSearchBox() {
+          // 查找 Docsify 搜索框的容器元素
+          var searchInput = document.querySelector('.search input[type="search"]');
+          searchInput.click();
+          searchInput.focus();
+      }
+  </script>
   <!-- 文档页脚增强 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer.min.js"></script>
   <!-- 阅读进度条 -->
